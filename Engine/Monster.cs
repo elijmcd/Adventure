@@ -13,5 +13,14 @@ namespace Engine
         public int MaximumDamage { get; set; }
         public int RewardExperience { get; set; }
         public int RewardGold { get; set; }
+
+        public Monster(int id, string name, int maxDam, int rewardXP, int rewardGP, int currentHP, int maxHP) : base(currentHP, maxHP)
+        {
+            ID = id;
+            Name = name;
+            MaximumDamage = maxDam;
+            RewardExperience = rewardXP;
+            RewardGold = rewardGP;
+        }
     }
 }
