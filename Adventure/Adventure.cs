@@ -20,6 +20,11 @@ namespace Adventure
         {
             InitializeComponent();
 
+            Location location = new Location(1, "Home", "This is your home.";
+            location.ID = 1;
+            location.Name = "Home";
+            location.Description = "This is your home.";
+
             _player = new Player();
 
             _player.CurrentHitpoints = 10;
