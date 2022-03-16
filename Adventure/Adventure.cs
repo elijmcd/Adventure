@@ -420,7 +420,7 @@ namespace Adventure
             //remove potion from inventory
             foreach(InventoryItem ii in _player.Inventory)
             {
-                if(ii.Details.ID == currentPotion)
+                if(ii.Details.ID == currentPotion.ID)
                 {
                     ii.Quantity--;
                     break;
