@@ -124,6 +124,43 @@ namespace Engine
 
             Location spiderField = new Location(LOCATION_ID_SPIDERFIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANTSPIDER);
+
+            //link locations together
+            home.LocationNorth = townSquare;
+
+            townSquare.LocationNorth = alchemistHut;
+            townSquare.LocationEast = guardPost;
+            townSquare.LocationSouth = home;
+            townSquare.LocationWest = farmhouse;
+
+            farmhouse.LocationEast = townSquare;
+            farmhouse.LocationWest = farmersField;
+
+            farmersField.LocationEast = farmhouse;
+
+            alchemistHut.LocationSouth = townSquare;
+            alchemistHut.LocationNorth = alchemistsGarden;
+
+            alchemistsGarden.LocationSouth = alchemistHut;
+
+            guardPost.LocationEast = bridge;
+            guardPost.LocationWest = townSquare;
+
+            bridge.LocationEast = spiderField;
+            bridge.LocationWest = townSquare;
+
+            spiderField.LocationWest = bridge;
+
+            //Add locations to static list
+            Locations.Add(home);
+            Locations.Add(townSquare);
+            Locations.Add(guardPost);
+            Locations.Add(alchemistHut);
+            Locations.Add(alchemistsGarden);
+            Locations.Add(farmhouse);
+            Locations.Add(farmersField);
+            Locations.Add(bridge);
+            Locations.Add(spiderField);
         }
 
         public static Item ItemByID(int id)

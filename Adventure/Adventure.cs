@@ -303,5 +303,9 @@ namespace Adventure
 
         }
 
+        private void goldLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
