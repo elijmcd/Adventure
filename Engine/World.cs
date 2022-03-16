@@ -74,8 +74,8 @@ namespace Engine
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 75, true));
 
             Monster giantSpider = new Monster(MONSTER_ID_GIANTSPIDER, "Giant spider", 20, 5, 40, 10, 10);
-            snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDERFANG), 75, true));
-            snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDERSILK), 25, false));
+            giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDERFANG), 75, true));
+            giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDERSILK), 25, false));
 
             Monsters.Add(rat);
             Monsters.Add(snake);

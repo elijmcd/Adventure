@@ -88,6 +88,10 @@ namespace Engine
                         {
                             return false;
                         }
+                        else if(ii.Quantity >= qci.Quantity)
+                        {
+                            return true;
+                        }
                     }
                 }
 

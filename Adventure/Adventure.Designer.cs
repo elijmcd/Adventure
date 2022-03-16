@@ -226,12 +226,14 @@ namespace Adventure
             // 
             // rtbLocation
             // 
+            this.rtbLocation.Font = new System.Drawing.Font("Sylfaen", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.rtbLocation.Location = new System.Drawing.Point(347, 20);
             this.rtbLocation.Name = "rtbLocation";
             this.rtbLocation.ReadOnly = true;
             this.rtbLocation.Size = new System.Drawing.Size(360, 105);
             this.rtbLocation.TabIndex = 17;
             this.rtbLocation.Text = "";
+            this.rtbLocation.TextChanged += new System.EventHandler(this.rtbLocation_TextChanged);
             // 
             // rtbMessages
             // 

@@ -106,7 +106,7 @@ namespace Adventure
 
                             //give quest rewards
                             rtbMessages.Text += "You receive: " + Environment.NewLine;
-                            rtbMessages.Text += newLocation.QuestAvailableHere.RewardExperience.ToString() + " experience points" + Environment.NewLine;
+                            rtbMessages.Text += newLocation.QuestAvailableHere.RewardExperience.ToString() + " experience points." + Environment.NewLine;
                             rtbMessages.Text += newLocation.QuestAvailableHere.RewardGold.ToString() + " gold" + Environment.NewLine;
                             rtbMessages.Text += newLocation.QuestAvailableHere.RewardItem.Name + Environment.NewLine;
                             rtbMessages.Text += Environment.NewLine;
@@ -115,7 +115,7 @@ namespace Adventure
                             _player.Gold += newLocation.QuestAvailableHere.RewardGold;
 
                             //add reward item to inventory
-                            bool addedItemToInventory = false;
+                            //bool addedItemToInventory = false;
 
                             _player.AddItemToInventory(newLocation.QuestAvailableHere.RewardItem);
 
@@ -305,14 +305,14 @@ namespace Adventure
             _currentMonster.CurrentHitpoints -= damageToMonster;
 
             //display message
-            rtbMessages.Text += "You hit the " + _currentMonster.Name + Environment.NewLine;
+            rtbMessages.Text += "You hit the " + _currentMonster.Name + " for " + damageToMonster.ToString() + " damage." + Environment.NewLine;
 
             //check if monster dies
             if(_currentMonster.CurrentHitpoints <= 0)
             {
                 //dead
                 rtbMessages.Text += Environment.NewLine;
-                rtbMessages.Text += "You have slain the " + _currentMonster.Name + Environment.NewLine;
+                rtbMessages.Text += "You have slain the " + _currentMonster.Name + "!" + Environment.NewLine;
 
                 //give exp
                 _player.ExperiencePoints += _currentMonster.RewardExperience;
@@ -436,7 +436,7 @@ namespace Adventure
             int damToPlayer = RandomGenerator.NumBetween(0, _currentMonster.MaximumDamage);
 
             //display message
-            rtbMessages.Text += "The " + _currentMonster.Name + " did " + damToPlayer.ToString() + " damage to you." + Environment.NewLine;
+            rtbMessages.Text += "The " + _currentMonster.Name + " did " + damToPlayer.ToString() + "  damage to you." + Environment.NewLine;
 
             //apply damage
             _player.CurrentHitpoints -= damToPlayer;
@@ -457,6 +457,11 @@ namespace Adventure
         }
 
         private void goldLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rtbLocation_TextChanged(object sender, EventArgs e)
         {
 
         }
