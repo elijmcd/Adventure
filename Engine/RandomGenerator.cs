@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class RandomGenerator
+    public class RandomGenerator
     {
         private static readonly RNGCryptoServiceProvider _generator = new RNGCryptoServiceProvider();
 
